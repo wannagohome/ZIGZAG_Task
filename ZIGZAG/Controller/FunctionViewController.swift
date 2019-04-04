@@ -69,46 +69,4 @@ class FunctionViewController: UIViewController, UITextFieldDelegate {
             break
         }
     }
-    
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        activeField = textField
-        lastOffset = self.scrollView.contentOffset
-        return true
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        activeField?.resignFirstResponder()
-        activeField = nil
-        return true
-    }
-    
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        guard keyboardHeight == nil else { return }
-        
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            keyboardHeight = keyboardSize.height
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                self.constraintContentHeight.constant += self.keyboardHeight!
-            })
-            
-            let distanceToBottom = self.scrollView.frame.size.height - (activeField?.frame.origin.y)! - (activeField?.frame.size.height)!
-            let collapseSpace = keyboardHeight! - distanceToBottom
-            if collapseSpace < 0 { return }
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                self.scrollView.contentOffset = CGPoint(x: self.lastOffset!.x, y: collapseSpace + 10)
-            })
-        }
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        UIView.animate(withDuration: 0.3) {
-            self.constraintContentHeight.constant -= self.keyboardHeight!
-            self.scrollView.contentOffset = self.lastOffset!
-        }
-        keyboardHeight = nil
-    }
-
 }
