@@ -745,7 +745,7 @@
                                                 <rect key="frame" x="0.0" y="353.66666666666669" width="414" height="57"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="꽃피는시절" translatesAutoresizingMaskIntoConstraints="NO" id="JBK-aw-Q90">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="JBK-aw-Q90">
                                                 <rect key="frame" x="18" y="423.33333333333331" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Pd6-e8-lZE"/>
@@ -1249,6 +1249,7 @@
     </scenes>
     <resources>
         <image name="checked_normal" width="60" height="60"/>
+        <image name="flower" width="499" height="755"/>
         <image name="function" width="48" height="48"/>
         <image name="home" width="48" height="48"/>
         <image name="login" width="352" height="227"/>
@@ -1257,6 +1258,5 @@
         <image name="unchecked_normal" width="60" height="60"/>
         <image name="unchecked_pressed" width="60" height="60"/>
         <image name="x" width="24" height="24"/>
-        <image name="꽃피는시절" width="499" height="755"/>
     </resources>
 </document>

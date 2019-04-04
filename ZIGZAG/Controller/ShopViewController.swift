@@ -50,7 +50,7 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     private func setupNavigationBarTitle() {
-        let image: UIImage = UIImage(named: "지그재그_로고.png")!
+        let image: UIImage = UIImage(named: "logo.png")!
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
